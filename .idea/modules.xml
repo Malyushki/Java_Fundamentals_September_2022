@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BasicSyntax-Exercise/BasicSyntax-Exercise.iml" filepath="$PROJECT_DIR$/BasicSyntax-Exercise/BasicSyntax-Exercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/BasicSyntax-Lab/BasicSyntax-Lab.iml" filepath="$PROJECT_DIR$/BasicSyntax-Lab/BasicSyntax-Lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BasicSyntax-MoreExercise/BasicSyntax-MoreExercise.iml" filepath="$PROJECT_DIR$/BasicSyntax-MoreExercise/BasicSyntax-MoreExercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/DataTypesAndVariables-Exercise/DataTypesAndVariables-Exercise.iml" filepath="$PROJECT_DIR$/DataTypesAndVariables-Exercise/DataTypesAndVariables-Exercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/DataTypesAndVariables-Lab/DataTypesAndVariables-Lab.iml" filepath="$PROJECT_DIR$/DataTypesAndVariables-Lab/DataTypesAndVariables-Lab.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java_Fundamentals_September_2022.iml" filepath="$PROJECT_DIR$/Java_Fundamentals_September_2022.iml" />
