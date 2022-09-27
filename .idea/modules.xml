@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arrays-Exercise/Arrays-Exercise.iml" filepath="$PROJECT_DIR$/Arrays-Exercise/Arrays-Exercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays-Lab/Arrays-Lab.iml" filepath="$PROJECT_DIR$/Arrays-Lab/Arrays-Lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays-MoreExercise/Arrays-MoreExercise.iml" filepath="$PROJECT_DIR$/Arrays-MoreExercise/Arrays-MoreExercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/BasicSyntax-Exercise/BasicSyntax-Exercise.iml" filepath="$PROJECT_DIR$/BasicSyntax-Exercise/BasicSyntax-Exercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/BasicSyntax-Lab/BasicSyntax-Lab.iml" filepath="$PROJECT_DIR$/BasicSyntax-Lab/BasicSyntax-Lab.iml" />
       <module fileurl="file://$PROJECT_DIR$/BasicSyntax-MoreExercise/BasicSyntax-MoreExercise.iml" filepath="$PROJECT_DIR$/BasicSyntax-MoreExercise/BasicSyntax-MoreExercise.iml" />
