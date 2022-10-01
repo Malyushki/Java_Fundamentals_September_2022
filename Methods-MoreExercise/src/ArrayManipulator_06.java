@@ -49,7 +49,7 @@ public class ArrayManipulator_06 {
 
     static int[] doExchange(String[] input, int[] numbers) {
         int n = Integer.parseInt(input[1]);
-        if (n > numbers.length) {
+        if (n > numbers.length - 1 || n < 0) {
             System.out.println("Invalid index");
         } else {
             for (int i = 0; i <= n; i++) {
@@ -78,7 +78,7 @@ public class ArrayManipulator_06 {
                 break;
             case "odd":
                 for (int i = 0; i < numbers.length; i++) {
-                    if (numbers[i] % 2 != 0 && numbers[i] >= maxNumber) {
+                    if (numbers[i] % 2 == 1 && numbers[i] >= maxNumber) {
                         maxNumber = numbers[i];
                         index = i;
                     }
@@ -109,7 +109,7 @@ public class ArrayManipulator_06 {
                 break;
             case "odd":
                 for (int i = 0; i < numbers.length; i++) {
-                    if (numbers[i] % 2 != 0 && numbers[i] <= minNumber) {
+                    if (numbers[i] % 2 == 1 && numbers[i] <= minNumber) {
                         minNumber = numbers[i];
                         index = i;
                     }
@@ -199,9 +199,20 @@ public class ArrayManipulator_06 {
             for (int i = 0; i < k; i++) {
                 firstNumbersDone[i] = firstNumbers[i];
             }
-            System.out.println(Arrays.toString(firstNumbersDone));
+            System.out.println(Arrays.toString(reverse(firstNumbersDone, firstNumbersDone.length)));
         } else {
             System.out.println("[]");
         }
+    }
+
+
+    static int[] reverse(int[] a, int n) {
+        int[] b = new int[n];
+        int j = n;
+        for (int i = 0; i < n; i++) {
+            b[j - 1] = a[i];
+            j = j - 1;
+        }
+        return b;
     }
 }
