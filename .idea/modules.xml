@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/EXAMS/ ProgrammingFundamentalsMidExamRetake_03/ ProgrammingFundamentalsMidExamRetake_03.iml" filepath="$PROJECT_DIR$/EXAMS/ ProgrammingFundamentalsMidExamRetake_03/ ProgrammingFundamentalsMidExamRetake_03.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays-Exercise/Arrays-Exercise.iml" filepath="$PROJECT_DIR$/Arrays-Exercise/Arrays-Exercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays-Lab/Arrays-Lab.iml" filepath="$PROJECT_DIR$/Arrays-Lab/Arrays-Lab.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays-MoreExercise/Arrays-MoreExercise.iml" filepath="$PROJECT_DIR$/Arrays-MoreExercise/Arrays-MoreExercise.iml" />
