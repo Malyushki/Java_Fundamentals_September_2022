@@ -5,54 +5,58 @@ import java.util.stream.Collectors;
 
 public class AnonymousThreat_08 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        List<String> arrays = Arrays.stream(scanner.nextLine().split(" ")).collect(Collectors.toList());
+        Scanner scanner =new Scanner(System.in);
+        List<String> stringsList = Arrays.stream(scanner.nextLine()
+                        .split(" "))
+                .collect(Collectors.toList());
         String command = scanner.nextLine();
         while (!command.equals("3:1")) {
-            String[] commandType = command.split(" ");
-            switch (commandType[0]) {
-                case "merge":
-                    int startIndex = Integer.parseInt(commandType[1]);
-                    int endIndex = Integer.parseInt(commandType[2]);
-                    String newCode = "";
-                    if (startIndex<0){
-                        startIndex = 0;
+//•	merge {startIndex} {endIndex}
+            if (command.contains("merge")) {
+                int startIndex = Integer.parseInt(command.split(" ")[1]);
+                int endIndex = Integer.parseInt(command.split(" ")[2]);
+                if (startIndex < 0) {
+                    startIndex = 0;
+                }
+                if (endIndex > stringsList.size() - 1) {
+                    endIndex = stringsList.size() - 1;
+                }
+                String result = "";
+                if (endIndex >= 0 && startIndex <= stringsList.size() - 1) {
+                    for (int i = startIndex; i <= endIndex; i++) {
+                        result += stringsList.get(i);
                     }
-                    if (startIndex>arrays.size()-1){
-                        break;
+                    for (int i = startIndex; i <= endIndex; i++) {
+                        stringsList.remove(startIndex);
                     }
-                    if (endIndex<0){
-                        break;
-                    }
-                    if (endIndex>arrays.size()-1){
-                        endIndex = arrays.size()-1;
-                    }
-                    for (int i = startIndex; i <=endIndex ; i++) {
-                        newCode+= arrays.get(i);
-                    }
-                    for (int i = startIndex; i <=endIndex ; i++) {
-                        arrays.remove(startIndex);
-                    }
+                    stringsList.add(startIndex, result);
 
-                    arrays.add(startIndex,newCode);
-                    break;
-                case "divide":
-                    int index = Integer.parseInt(commandType[1]);
-                    int partitions = Integer.parseInt(commandType[2]);
-                   while (arrays.get(index).length()%partitions!=0)
+                }
 
-
-
-                    // if (arrays.get(index).length()%partitions!=0){
-                     //
-                    //}
-                    break;
+            } else if (command.contains("divide")) {
+//                •	divide {index} {partitions}
+                int index = Integer.parseInt(command.split(" ")[1]);
+                int partitions = Integer.parseInt(command.split(" ")[2]);
+                if (isValidIndex(stringsList.size(), index)) {
+                    String element = stringsList.get(index);
+                    stringsList.remove(index);
+                    int countElements = element.length() / partitions;
+                    int beginIndex = 0;
+                    for (int i = 1; i < partitions; i++) {
+                        stringsList.add(index, element.substring(beginIndex, beginIndex + countElements));
+                        index++;
+                        beginIndex += countElements;
+                    }
+                    stringsList.add(index, element.substring(beginIndex));
+                }
             }
-
-
             command = scanner.nextLine();
         }
+        System.out.print(stringsList.toString().replaceAll("[\\[\\],]", ""));
+        //   System.out.println(String.join(" ", stringsList));- още един начин за печат на List от стрингове
+    }
 
-        System.out.println(arrays);
+    public static boolean isValidIndex(int size, int position) {
+        return (position >= 0 && position < size);
     }
 }
