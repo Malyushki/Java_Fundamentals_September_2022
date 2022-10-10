@@ -18,18 +18,17 @@ public class MergingLists_03 {
             numbers2.remove(0);
 
         }
-        if (numbers1.size() > 1) {
+        if (numbers1.size() > numbers2.size()) {
             for (int i = 0; i < numbers1.size(); i++) {
                 combined.add(numbers1.get(i));
 
             }
-        }
-        if (numbers2.size() > 1) {
+        }else {
             for (int i = 0; i < numbers2.size(); i++) {
                 combined.add(numbers2.get(i));
 
             }
         }
-        System.out.println(combined.toString());
+        System.out.println(combined.toString().replaceAll("[\\[\\],]",""));
     }
 }
