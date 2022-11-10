@@ -10,7 +10,7 @@ public class SoftUniKaraoke_02 {
         List<String> songList = Arrays.stream(scanner.nextLine().split(",\\s+")).collect(Collectors.toList());
         List<String> awardsList = new ArrayList<>();
         int[] countAward = new int[participantsList.size()];
-        ArrayList[][][] winnersList = new ArrayList[participantsList.size()][songList.size()][songList.size()];
+        ArrayList[][] winnersList = new ArrayList[participantsList.size()][songList.size()];
         String command = scanner.nextLine();
         while (!command.equals("dawn")){
             String[] commandType = command.split(",\\s+");
@@ -18,7 +18,8 @@ public class SoftUniKaraoke_02 {
             String song = commandType[1];
             String award = commandType[2];
             if (participantsList.contains(participant)&&songList.contains(song)){
-                winnersList[0][0][0].add(participant);
+                winnersList.add(new ArrayList<String>());
+                winnersList.get(0).add("String");
                 winnersList[1][0][0].add(song);
             }
             command = scanner.nextLine();
