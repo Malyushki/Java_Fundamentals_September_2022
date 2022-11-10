@@ -6,19 +6,18 @@ public class StringExplosion_07 {
         int explosion = 0;
         for (int i = 0; i <text.length() ; i++) {
             if (text.charAt(i)=='>'){
-                if (Character.isDigit(text.charAt(i+1))){
                 explosion = Integer.parseInt(String.valueOf(text.charAt(i+1))) + explosion;
-           while (explosion>0) {
+           while (explosion>0 && text.length()-1-i>0) {
                if (text.charAt(i + 1) != '>') {
                    text.delete(i + 1, i + 2);
                    explosion--;
-               } else {
+               }else {
                    break;
                }
            }
            }
             }
-        }
+
         System.out.println(text);
     }
 }
